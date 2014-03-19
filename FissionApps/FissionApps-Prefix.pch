@@ -1,0 +1,52 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iPhone SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Security/Security.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <QuartzCore/QuartzCore.h>
+#import "WBNoticeView.h"
+#import "WBErrorNoticeView.h"
+#import "WBSuccessNoticeView.h"
+#import "WBStickyNoticeView.h"
+#import "NSOperationQueue+WBNoticeExtensions.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "ActionSheetPicker.h"
+#import "ActionSheetDatePicker.h"
+#import "AbstractActionSheetPicker.h"
+#import "FclAPICleint.h"
+#import "AFHTTPClient.h"
+#import "AFNetworking.h"
+#import "FCLUtilities.h"
+#define dataToString(data) ([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding])
+#import "Base64.h"
+#import "JSONKit.h"
+#import "SVProgressHUD.h"
+#import "Reachability.h"
+#define FCLOrangeColor [UIColor colorWithRed:231/255.0 green:76/255.0 blue:60/255.0 alpha:1]
+#define backgroundHeaderColor [UIColor colorWithRed:236/255.0f green:240/255.0f blue:241/255.0f alpha:1]
+
+#endif
+#else
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <CoreServices/CoreServices.h>
+#endif
+#endif
+
